@@ -7,29 +7,40 @@
 //
 
 import UIKit
+import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController,CarMapViewModelDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    var mapViewModel:CarMapViewModel!
+    var carVM:CarViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.mapView.showsUserLocation = true
+        self.mapViewModel = CarMapViewModel(carViewModel: self.carVM, delegateObj: self)
+        self.mapView.delegate = self.mapViewModel
 
+
+        addBackButton()
         // Do any additional setup after loading the view.
     }
+    
+    func addBackButton() -> Void {
+        let backBar = UIBarButtonItem.init(title: "Back",
+                                           style: .plain, target: self,
+                                           action: #selector(didPressedBack))
+        self.navigationItem.leftBarButtonItem = backBar
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func didPressedBack() {
+        self.navigationController?.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getMapView() -> MKMapView {
+        return self.mapView
     }
-    */
 
 }

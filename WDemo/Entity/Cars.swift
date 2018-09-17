@@ -15,7 +15,7 @@ class coordinate: NSObject {
     
 }
 
-class CarsItem: NSObject {
+class CarItem: NSObject {
     var address:String?
     var engineType:String?
     var exterior:String?
@@ -24,37 +24,49 @@ class CarsItem: NSObject {
     var name:String?
     var vin:String?
     var coordinates:coordinate?
+    
+    init(json:JSON) {
+        super.init()
+        for (subKey,subValue):(String, JSON) in json {
+            if subKey == "address" {
+                self.address = subValue.string
+            } else if subKey == "engineType" {
+                self.engineType = subValue.string
+            } else if subKey == "exterior" {
+                self.exterior = subValue.string
+            } else if subKey == "fuel" {
+                self.fuel = subValue.number
+            } else if subKey == "interior" {
+                self.interior = subValue.string
+            } else if subKey == "name" {
+                self.name = subValue.string
+            } else if subKey == "vin" {
+                self.vin = subValue.string
+            } else if subKey == "coordinates" {
+                let coord:coordinate = coordinate.init()
+                coord.longitude = subValue.array![0].number!
+                coord.latitude = subValue.array![1].number!
+                self.coordinates = coord
+            }
+        }
+    }
 }
 
-class CarResponse: ResponseBaseEntity {
+class CarResponse: NSObject {
     var placemarks:NSMutableArray?
     
     init(json:JSON) {
         super.init()
-        self.placemarks = NSMutableArray()
-        for (key,value):(String,JSON) in json { //array
-            for (subKey,subValue):(String,JSON) in value { //dic
-               
-                let carItem:CarsItem = CarsItem()
+        self.placemarks = NSMutableArray();
+        
+        for (_,value):(String, JSON) in json {
+            for (_,subJson):(String, JSON) in value {
                 
-                for(dicKey,dicValue):(String,JSON) in subValue {
-                    switch dicValue.type {
-                    case .string:
-                        carItem.setValue(dicValue.string, forKey: dicKey)
-                        break;
-                    case .number:
-                        carItem.setValue(dicValue.number, forKey: dicKey)
-                        break;
-                    case .array:
-                        let location:coordinate = coordinate()
-                        //                    location.latitude = subValue.array![0]
-                    //                    location.longitude = subValue.array![1]
-                    default:
-                        break;
-                    }
-                }
-                self.placemarks?.add(carItem)
+                let car:CarItem = CarItem(json: subJson)
+
+                self.placemarks?.add(car)
             }
+            break;
         }
     }
 }

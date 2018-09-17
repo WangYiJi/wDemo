@@ -61,7 +61,7 @@ class ResponseBaseEntity: NSObject {
 
 class SwiftNetworkCenter: NSObject {
 
-    func downloadFile(sURL:String,successBlock:@escaping requestSuccess, failBlock:@escaping requestFail) -> Void {
+    static func downloadFile(successBlock:@escaping requestSuccess, failBlock:@escaping requestFail) -> Void {
         
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileURL = documentsURL.appendingPathComponent("locations.json")
@@ -72,7 +72,7 @@ class SwiftNetworkCenter: NSObject {
                 let nsData:NSData = try NSData(contentsOfFile: fileURL.path)
                 let jsonData = try JSON(data: nsData as Data)
                 let carRep:CarResponse = CarResponse.init(json: jsonData)
-                print(carRep)
+                successBlock(carRep)
             } catch {
                 
             }
@@ -89,7 +89,7 @@ class SwiftNetworkCenter: NSObject {
                     let nsData:NSData = try NSData(contentsOf: response.destinationURL!)
                     let jsonData = try JSON(data: nsData as Data)
                     let carRep:CarResponse = CarResponse.init(json: jsonData)
-                    print(carRep)
+                    successBlock(carRep)
                 } catch {
                     
                 }

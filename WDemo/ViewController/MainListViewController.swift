@@ -8,28 +8,44 @@
 
 import UIKit
 
-class MainListViewController: UIViewController {
-
+class MainListViewController: UIViewController,CarListTableViewModelDelegate {
+    var carListTableviewModel:CarListTableViewModel!
+    var carVM:CarViewModel!
+    
+    @IBOutlet weak var mainTableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.title = "Car List"
+        
+        let rightBar = UIBarButtonItem.init(title: "Map",
+                                            style: .plain, target: self,
+                                            action: #selector(didPressedMap))
+        self.navigationItem.rightBarButtonItem = rightBar
+        
+        self.carVM = CarViewModel()
+        
+        self.carListTableviewModel = CarListTableViewModel.init(identifier: "CarItemCell",
+                                                                viewModel: self.carVM,
+                                                                tableview: self.mainTableview)
+        
+        self.carListTableviewModel.delegate = self;
+        
+        self.mainTableview.delegate = self.carListTableviewModel
+        self.mainTableview.dataSource = self.carListTableviewModel
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func didPressedMap() {
+        let mapVC:MapViewController = MapViewController.init(nibName:"MapViewController",bundle:nil)
+        mapVC.carVM = self.carVM
+        self.navigationController?.pushViewController(mapVC, animated: true)
     }
-    */
-
+    
+    //viewModel delegate
+    func reloadCarList() {
+        self.mainTableview.reloadData()
+    }
 }
