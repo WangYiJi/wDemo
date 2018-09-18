@@ -17,15 +17,14 @@ class CarMapViewModel: NSObject,LocationManagerDelegate,CarAnnotationViewDelegat
     var bIsSelected:Bool = false
     var selectPoint:CLLocationCoordinate2D?
     var lastRemoveAnnotation:Array<MKAnnotation>?
+    private var myContext = 0
     
     func getCoordinateDelegateSuccess() {
         setMapWithCenterCoordinate(coordinate: LocationManager.sharedInstance.userCoordinate!)
     }
     
     func getCoordinateDelegateFailed() {
-        //When faild use germany location
-        let germanyCoordinate = CLLocationCoordinate2DMake(10.01423,53.59376000000)
-        setMapWithCenterCoordinate(coordinate: germanyCoordinate)
+        //Will display all point visible
     }
     
     var carVM:CarViewModel!
@@ -36,11 +35,8 @@ class CarMapViewModel: NSObject,LocationManagerDelegate,CarAnnotationViewDelegat
         super.init()
         self.carVM = carViewModel
         self.delegate = delegateObj
-        if self.carVM.carsResponse != nil {
-            updateAnnotation()
-        } else {
-            self.carVM.requestCarList()
-        }
+        //Don't have to get data, because after list view, The data already exist
+        loadExistCars()
         getUserLocation()
     }
     
@@ -58,31 +54,47 @@ class CarMapViewModel: NSObject,LocationManagerDelegate,CarAnnotationViewDelegat
     //MARK:- Map Method
     func setMapWithCenterCoordinate(coordinate:CLLocationCoordinate2D) -> Void {
         self.delegate?.getMapView().setCenter(coordinate, animated: true)
-        self.delegate?.getMapView().zoomLevel = 15
+        self.delegate?.getMapView().zoomLevel = 10
 
     }
     
-    func updateAnnotation() -> Void {
-        let annotationArray:Array<MKAnnotation> = Array.init()
+    func loadExistCars() -> Void {
+        displayCarOnMap(carList: self.carVM.carList)
+    }
+    
+    func displayCarOnMap(carList:Array<CarEntity>) {
+        var annotationArray:Array<MKAnnotation> = Array.init()
         
-        removeAllAnnotations()
+        //removeAllAnnotations()
         
-        for car in (self.carVM.carsResponse?.placemarks)! {
-            let carObj:CarItem = car as! CarItem
+        for carObj in carList {
             let annotationObj = MKPointAnnotation()
-            annotationObj.coordinate = CLLocation(latitude: (carObj.coordinates?.latitude.doubleValue)!,
-                                                  longitude: (carObj.coordinates?.longitude.doubleValue)!).coordinate
+            annotationObj.coordinate = CLLocation(latitude: carObj.latitude,
+                                                  longitude: carObj.longitude).coordinate
             annotationObj.title = carObj.name
-            self.delegate?.getMapView().addAnnotation(annotationObj)
+            annotationArray.append(annotationObj)
         }
         self.delegate?.getMapView().addAnnotations(annotationArray)
-        print("updateAnnotation")
+        
+        if !LocationManager.sharedInstance.userExist {
+            let first = (annotationArray.first?.coordinate)!
+            //can't got user location, set visible regoin
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.setvisibleDisplay(point: first)
+            }
+        }
+    }
+    
+    func setvisibleDisplay(point:CLLocationCoordinate2D) -> Void {
+        let region = MKCoordinateRegionMakeWithDistance(point, 3000, 3000)
+        self.delegate?.getMapView().setRegion(region, animated: false)
     }
     
     func removeAllAnnotations() -> Void {
         let existAnnotation = self.delegate?.getMapView().annotations
         self.delegate?.getMapView().removeAnnotations(existAnnotation!)
     }
+    
 }
 
 
@@ -137,21 +149,4 @@ extension CarMapViewModel:MKMapViewDelegate {
             return false
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

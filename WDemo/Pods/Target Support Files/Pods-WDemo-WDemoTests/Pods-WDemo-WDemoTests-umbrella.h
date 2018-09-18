@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "HandyJSON.h"
 
-FOUNDATION_EXPORT double HandyJSONVersionNumber;
-FOUNDATION_EXPORT const unsigned char HandyJSONVersionString[];
+FOUNDATION_EXPORT double Pods_WDemo_WDemoTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_WDemo_WDemoTestsVersionString[];
 

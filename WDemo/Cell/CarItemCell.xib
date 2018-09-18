@@ -32,7 +32,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-g3-95a">
                         <rect key="frame" x="16" y="48" width="288" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -68,8 +68,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="address" destination="7t8-g3-95a" id="obv-uS-zCa"/>
-                <outlet property="fuel" destination="Bl5-Kf-zog" id="QFV-4a-bTe"/>
+                <outlet property="lblAddress" destination="7t8-g3-95a" id="Kqj-aP-Oqh"/>
+                <outlet property="lblFuel" destination="Bl5-Kf-zog" id="WUA-ut-pjJ"/>
                 <outlet property="lblName" destination="Nbq-AF-blF" id="f9X-yy-BP2"/>
             </connections>
             <point key="canvasLocation" x="-94" y="51"/>

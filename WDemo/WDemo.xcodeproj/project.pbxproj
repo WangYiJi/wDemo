@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3140639721500DDA0076AD06 /* CarEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140639521500DDA0076AD06 /* CarEntity+CoreDataProperties.swift */; };
+		3140639821500DDA0076AD06 /* CarEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140639621500DDA0076AD06 /* CarEntity+CoreDataClass.swift */; };
 		3148A559214BF05E002B875E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148A558214BF05E002B875E /* AppDelegate.swift */; };
 		3148A561214BF05E002B875E /* WDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3148A55F214BF05E002B875E /* WDemo.xcdatamodeld */; };
 		3148A563214BF05F002B875E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3148A562214BF05F002B875E /* Assets.xcassets */; };
@@ -17,7 +19,6 @@
 		3148A583214BF0B7002B875E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148A581214BF0B7002B875E /* MapViewController.swift */; };
 		3148A584214BF0B7002B875E /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3148A582214BF0B7002B875E /* MapViewController.xib */; };
 		3148A587214BF1AC002B875E /* SwiftNetworkCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148A586214BF1AC002B875E /* SwiftNetworkCenter.swift */; };
-		3148A58E214BFD77002B875E /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148A58D214BFD77002B875E /* Cars.swift */; };
 		3148A592214CBC4B002B875E /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148A591214CBC4B002B875E /* CarViewModel.swift */; };
 		31C70E16214D7D1B00E53F1D /* CarListTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C70E15214D7D1B00E53F1D /* CarListTableViewModel.swift */; };
 		31C70E18214D7D2C00E53F1D /* CarMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C70E17214D7D2C00E53F1D /* CarMapViewModel.swift */; };
@@ -29,6 +30,8 @@
 		31C70E26214E008300E53F1D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C70E25214E008300E53F1D /* LocationManager.swift */; };
 		31C70E28214E094C00E53F1D /* CarAnnoation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C70E27214E094C00E53F1D /* CarAnnoation.swift */; };
 		31C70E2A214FA7E500E53F1D /* UIMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C70E29214FA7E500E53F1D /* UIMapView+Extension.swift */; };
+		31E39C472150084300316D70 /* DBHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E39C462150084300316D70 /* DBHelp.swift */; };
+		34BFF17045699D5CC360612C /* libPods-WDemo-WDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B8052FC296649EB95AFCFD /* libPods-WDemo-WDemoTests.a */; };
 		DCFABC06E6BC731151D7A64F /* libPods-WDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEBA1C9062ED473522AE02A /* libPods-WDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3140639521500DDA0076AD06 /* CarEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3140639621500DDA0076AD06 /* CarEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CarEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3148A555214BF05D002B875E /* WDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3148A558214BF05E002B875E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3148A560214BF05E002B875E /* WDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WDemo.xcdatamodel; sourceTree = "<group>"; };
@@ -57,7 +62,6 @@
 		3148A581214BF0B7002B875E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3148A582214BF0B7002B875E /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		3148A586214BF1AC002B875E /* SwiftNetworkCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNetworkCenter.swift; sourceTree = "<group>"; };
-		3148A58D214BFD77002B875E /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		3148A591214CBC4B002B875E /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		31C70E15214D7D1B00E53F1D /* CarListTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTableViewModel.swift; sourceTree = "<group>"; };
 		31C70E17214D7D2C00E53F1D /* CarMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapViewModel.swift; sourceTree = "<group>"; };
@@ -69,9 +73,13 @@
 		31C70E25214E008300E53F1D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		31C70E27214E094C00E53F1D /* CarAnnoation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnoation.swift; sourceTree = "<group>"; };
 		31C70E29214FA7E500E53F1D /* UIMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIMapView+Extension.swift"; sourceTree = "<group>"; };
+		31E39C462150084300316D70 /* DBHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelp.swift; sourceTree = "<group>"; };
 		7BE9A26F3FBD45288B45EF97 /* Pods-WDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDemo/Pods-WDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9AEBA1C9062ED473522AE02A /* libPods-WDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FAB37050F578AFBE762210 /* Pods-WDemo-WDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDemo-WDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDemo-WDemoTests/Pods-WDemo-WDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1B8052FC296649EB95AFCFD /* libPods-WDemo-WDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WDemo-WDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB13B3897DED2D00DF3698F6 /* Pods-WDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDemo/Pods-WDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C88E3A8EB69797B649BBB413 /* Pods-WDemo-WDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDemo-WDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDemo-WDemoTests/Pods-WDemo-WDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BFF17045699D5CC360612C /* libPods-WDemo-WDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +109,8 @@
 			children = (
 				7BE9A26F3FBD45288B45EF97 /* Pods-WDemo.debug.xcconfig */,
 				BB13B3897DED2D00DF3698F6 /* Pods-WDemo.release.xcconfig */,
+				A1FAB37050F578AFBE762210 /* Pods-WDemo-WDemoTests.debug.xcconfig */,
+				C88E3A8EB69797B649BBB413 /* Pods-WDemo-WDemoTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 		3148A54C214BF05D002B875E = {
 			isa = PBXGroup;
 			children = (
+				31E39C412150076A00316D70 /* CoreData */,
 				31C70E1E214DE04400E53F1D /* Category */,
 				31C70E19214DDFF100E53F1D /* Cell */,
 				3148A58C214BFD49002B875E /* Entity */,
@@ -168,6 +180,7 @@
 				3148A586214BF1AC002B875E /* SwiftNetworkCenter.swift */,
 				31C70E25214E008300E53F1D /* LocationManager.swift */,
 				31C70E27214E094C00E53F1D /* CarAnnoation.swift */,
+				31E39C462150084300316D70 /* DBHelp.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -185,7 +198,6 @@
 		3148A58C214BFD49002B875E /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				3148A58D214BFD77002B875E /* Cars.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -208,12 +220,22 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		31E39C412150076A00316D70 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3140639621500DDA0076AD06 /* CarEntity+CoreDataClass.swift */,
+				3140639521500DDA0076AD06 /* CarEntity+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		5183D37DEE1C1D544FA12D8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				31C70E23214DFF6000E53F1D /* CoreLocation.framework */,
 				31C70E21214DFF3400E53F1D /* MapKit.framework */,
 				9AEBA1C9062ED473522AE02A /* libPods-WDemo.a */,
+				B1B8052FC296649EB95AFCFD /* libPods-WDemo-WDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3148A578214BF05F002B875E /* Build configuration list for PBXNativeTarget "WDemoTests" */;
 			buildPhases = (
+				66C6A141CCF4111FC71F6717 /* [CP] Check Pods Manifest.lock */,
 				3148A568214BF05F002B875E /* Sources */,
 				3148A569214BF05F002B875E /* Frameworks */,
 				3148A56A214BF05F002B875E /* Resources */,
@@ -336,6 +359,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		66C6A141CCF4111FC71F6717 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WDemo-WDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -347,15 +388,17 @@
 				3148A587214BF1AC002B875E /* SwiftNetworkCenter.swift in Sources */,
 				31C70E16214D7D1B00E53F1D /* CarListTableViewModel.swift in Sources */,
 				3148A559214BF05E002B875E /* AppDelegate.swift in Sources */,
+				31E39C472150084300316D70 /* DBHelp.swift in Sources */,
 				3148A583214BF0B7002B875E /* MapViewController.swift in Sources */,
 				31C70E28214E094C00E53F1D /* CarAnnoation.swift in Sources */,
+				3140639721500DDA0076AD06 /* CarEntity+CoreDataProperties.swift in Sources */,
 				3148A57F214BF0AA002B875E /* MainListViewController.swift in Sources */,
-				3148A58E214BFD77002B875E /* Cars.swift in Sources */,
 				31C70E18214D7D2C00E53F1D /* CarMapViewModel.swift in Sources */,
 				31C70E2A214FA7E500E53F1D /* UIMapView+Extension.swift in Sources */,
 				31C70E26214E008300E53F1D /* LocationManager.swift in Sources */,
 				3148A592214CBC4B002B875E /* CarViewModel.swift in Sources */,
 				31C70E1C214DE01200E53F1D /* CarItemCell.swift in Sources */,
+				3140639821500DDA0076AD06 /* CarEntity+CoreDataClass.swift in Sources */,
 				31C70E20214DE06100E53F1D /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,10 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77274K7C27;
 				INFOPLIST_FILE = WDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexWong.WDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,10 +571,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77274K7C27;
 				INFOPLIST_FILE = WDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexWong.WDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -544,17 +581,14 @@
 		};
 		3148A579214BF05F002B875E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FAB37050F578AFBE762210 /* Pods-WDemo-WDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77274K7C27;
 				INFOPLIST_FILE = WDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexWong.WDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -565,17 +599,14 @@
 		};
 		3148A57A214BF05F002B875E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C88E3A8EB69797B649BBB413 /* Pods-WDemo-WDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77274K7C27;
 				INFOPLIST_FILE = WDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexWong.WDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

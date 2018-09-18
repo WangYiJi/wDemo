@@ -1,0 +1,6 @@
+module Pods_WDemo_WDemoTests {
+  umbrella header "Pods-WDemo-WDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,9 +8,9 @@
 
 import UIKit
 
-let DEFCARLIST = "carsResponse"
-
 typealias completeBlock = () -> ()
+
+let DEFCARLIST = "carList"
 
 protocol CarListTableViewModelDelegate:NSObjectProtocol {
     func reloadCarList()
@@ -21,7 +21,6 @@ class CarListTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource 
     
     var carVM:CarViewModel!
     
-    //weak var delegate:CarListTableViewModelDelegate?
     weak var delegate:CarListTableViewModelDelegate?
     
     private var myContext = 0
@@ -71,9 +70,11 @@ class CarListTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let carObj:CarItem = self.carVM.carsResponse?.placemarks?.object(at: indexPath.row) as! CarItem
+        let carObj:CarEntity = self.carVM.carList[indexPath.row]
         let cell:CarItemCell = tableView.dequeueReusableCell(withIdentifier: "CarItemCell") as! CarItemCell
         cell.lblName.text = carObj.name
+        cell.lblAddress.text = carObj.address
+        cell.lblFuel.text = "\(carObj.fuel)"
         
         return cell
     }

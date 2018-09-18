@@ -23,11 +23,27 @@ class WDemoTests: XCTestCase {
     }
     
     func testFetchCarList() {
-        let carVM = CarViewModel()
-//        let expectation = expectationWithDescription("")
-//        let timeout = 15 as NSTimeInterval
-//        let carVM = carviewmo
-//        waitForExpectationsWithTimeout(timeout, handler: nil)
+        let expect = self.expectation(description: "fetch car list")
+        SwiftNetworkCenter.downloadFile(successBlock: {
+            expect.fulfill()
+            print("Unit Test Success")
+        }) { (error) in
+            XCTFail("Get Data Fail")
+        }
+        waitForExpectations(timeout: 10) { (error) in
+            if error != nil {
+                XCTFail("Get Data Timeout")
+                print("Time out")
+            }
+        }
+    }
+    
+    //After finish testFetchCarList()
+    func testSearchCoreData () {
+        let carList = DBHelp.shared.searchWithName(modelName: "CarEntity")
+        if carList.count <= 0 {
+            XCTFail("Date is null")
+        }
     }
     
     func testExample() {

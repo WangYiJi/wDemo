@@ -12,8 +12,8 @@ class CarItemCell: UITableViewCell {
 
 
     @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var fuel: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblFuel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

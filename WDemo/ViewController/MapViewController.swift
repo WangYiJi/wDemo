@@ -18,7 +18,7 @@ class MapViewController: UIViewController,CarMapViewModelDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.title = "Map"
         self.mapView.showsUserLocation = true
         self.mapViewModel = CarMapViewModel(carViewModel: self.carVM, delegateObj: self)
         self.mapView.delegate = self.mapViewModel
@@ -27,7 +27,7 @@ class MapViewController: UIViewController,CarMapViewModelDelegate {
         addBackButton()
         // Do any additional setup after loading the view.
     }
-    
+
     func addBackButton() -> Void {
         let backBar = UIBarButtonItem.init(title: "Back",
                                            style: .plain, target: self,

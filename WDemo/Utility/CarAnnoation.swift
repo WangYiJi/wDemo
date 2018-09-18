@@ -44,7 +44,6 @@ class CarAnnoationView: MKAnnotationView {
         self.addSubview(self.imageViewPop)
         self.addSubview(self.btnPoint)
         self.addSubview(self.lblCarName)
-        
     }
     
     @objc func didPressedCar() -> Void {

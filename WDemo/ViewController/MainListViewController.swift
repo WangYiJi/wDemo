@@ -17,7 +17,7 @@ class MainListViewController: UIViewController,CarListTableViewModelDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Car List"
-        
+
         let rightBar = UIBarButtonItem.init(title: "Map",
                                             style: .plain, target: self,
                                             action: #selector(didPressedMap))
@@ -33,10 +33,8 @@ class MainListViewController: UIViewController,CarListTableViewModelDelegate {
         
         self.mainTableview.delegate = self.carListTableviewModel
         self.mainTableview.dataSource = self.carListTableviewModel
-        
-        
-        
     }
+
     
     @objc func didPressedMap() {
         let mapVC:MapViewController = MapViewController.init(nibName:"MapViewController",bundle:nil)
