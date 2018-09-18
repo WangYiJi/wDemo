@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+let accessCarURL = "https://s3-us-west-2.amazonaws.com/wunderbucket/locations.json"
+
 //Request Success Block
 typealias requestSuccess = () -> ()
 //Request Fail Block
@@ -71,7 +73,7 @@ class SwiftNetworkCenter: NSObject {
             return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
         }
         
-        Alamofire.download("https://s3-us-west-2.amazonaws.com/wunderbucket/locations.json", to: destination).response { response in
+        Alamofire.download(accessCarURL, to: destination).response { response in
             print(response)
             do {
                 let nsData:NSData = try NSData(contentsOf: response.destinationURL!)
@@ -116,41 +118,4 @@ class SwiftNetworkCenter: NSObject {
             DBHelp.shared.saveContext()
     }
 }
-
-
-
-
-/*
- let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
- let fileURL = documentsURL.appendingPathComponent("locations.json")
- 
- if FileManager.default.fileExists(atPath: fileURL.path) {
- //Exist Just Read From Disk
- do {
- let nsData:NSData = try NSData(contentsOfFile: fileURL.path)
- let jsonData = try JSON(data: nsData as Data)
- let carRep:CarResponse = CarResponse.init(json: jsonData)
- successBlock(carRep)
- } catch {
- 
- }
- } else {
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

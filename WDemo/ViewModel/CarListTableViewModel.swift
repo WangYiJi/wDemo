@@ -24,17 +24,7 @@ class CarListTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource 
     weak var delegate:CarListTableViewModelDelegate?
     
     private var myContext = 0
-    
-//    lazy var popView:PopMapView = {
-//        let view:PopMapView = PopMapView()
-//        view.frame = CGRect(x: 0, y: 0, width: 300, height: 400);
-//        view.dismissBlock = { (popview) in
-//            PopTool.sharedInstance().close(animated: true)
-//        }
-//        return view
-//    }()
-    
-    
+
     init(identifier:NSString,viewModel:CarViewModel,tableview:UITableView) {
         super.init()
         
@@ -82,15 +72,6 @@ class CarListTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80;
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let poiItem:poiListItem = self.vehicleVM!.vehicleList?.poiList?.object(at: indexPath.row) as! poiListItem
-//        let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: poiItem.coordinate?.latitude.doubleValue ?? 0.0, longitude: poiItem.coordinate?.longitude.doubleValue ?? 0.0)
-//
-//        self.popView.setAnnotation(coordinate)
-//        PopTool.sharedInstance().pop(self.popView, animated: true)
-    }
-    
 }
 
 extension CarListTableViewModel {

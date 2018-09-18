@@ -29,10 +29,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-g3-95a">
-                        <rect key="frame" x="16" y="48" width="288" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t8-g3-95a">
+                        <rect key="frame" x="16" y="48" width="288" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="SAS-Vi-leS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -59,9 +61,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Nbq-AF-blF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="1hd-oi-mjd"/>
+                    <constraint firstAttribute="trailing" secondItem="7t8-g3-95a" secondAttribute="trailing" constant="16" id="CN0-eW-A9D"/>
                     <constraint firstItem="Bl5-Kf-zog" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="HfJ-v5-9XO"/>
                     <constraint firstItem="ZcV-Wh-rYL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="JE4-9e-G5V"/>
+                    <constraint firstAttribute="bottom" secondItem="7t8-g3-95a" secondAttribute="bottom" constant="-0.5" id="K7W-Ko-ZD7"/>
                     <constraint firstItem="ZcV-Wh-rYL" firstAttribute="leading" secondItem="Nbq-AF-blF" secondAttribute="trailing" constant="8" id="M9l-hp-Yc2"/>
+                    <constraint firstItem="7t8-g3-95a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OW7-Ne-rGT"/>
                     <constraint firstItem="Bl5-Kf-zog" firstAttribute="leading" secondItem="ZcV-Wh-rYL" secondAttribute="trailing" constant="2" id="Xqz-1O-Tfd"/>
                     <constraint firstItem="Nbq-AF-blF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sa7-7q-TFj"/>
                 </constraints>
@@ -72,7 +77,7 @@
                 <outlet property="lblFuel" destination="Bl5-Kf-zog" id="WUA-ut-pjJ"/>
                 <outlet property="lblName" destination="Nbq-AF-blF" id="f9X-yy-BP2"/>
             </connections>
-            <point key="canvasLocation" x="-94" y="51"/>
+            <point key="canvasLocation" x="-277" y="-13"/>
         </tableViewCell>
     </objects>
 </document>
